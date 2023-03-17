@@ -27,7 +27,7 @@ const HeaderComponent = () => {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div id="section">
-      <div className="spacer">
+      {/* <div className="spacer">
         <Container>
           <Row className="justify-content-center">
             <Col md="7" className="text-center">
@@ -40,8 +40,8 @@ const HeaderComponent = () => {
             </Col>
           </Row>
         </Container>
-      </div>
-      <div className="header1 po-relative">
+      </div> */}
+      {/* <div className="header1 po-relative">
         <Container>
           <Navbar className="navbar-expand-lg h1-nav">
             <NavbarBrand href="#">
@@ -88,8 +88,8 @@ const HeaderComponent = () => {
             </Collapse>
           </Navbar>
         </Container>
-      </div>
-      <div className="header1 po-relative bg-dark">
+      </div> */}
+      {/* <div className="header1 po-relative bg-dark">
         <Container>
           <Navbar className="navbar-expand-lg h2-nav">
             <NavbarBrand href="#">
@@ -136,7 +136,7 @@ const HeaderComponent = () => {
             </Collapse>
           </Navbar>
         </Container>
-      </div>
+      </div> */}
     </div>
   );
 };
