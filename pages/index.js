@@ -1,17 +1,16 @@
+import Head from "next/head";
 import Footer from "../layout/footer/Footer";
 import CustomComponents from "../components/custom/Custom-components";
 
 export default function Home() {
   return (
     <div>
-      {/* <Head>
-        <title>NextJs UI kit | Free UI kit built with bootstrap</title>
+      <Head>
         <meta
-          name="description"
-          content="NextJs UI kit | Free UI kit built with bootstrap"
+          name="apple-mobile-web-app-capable"
+          content="yes"
         />
-        <link rel="icon" href="/favicon.ico" />
-      </Head> */}
+      </Head>
       <CustomComponents />
       <Footer />
     </div>
