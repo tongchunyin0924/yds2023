@@ -1,4 +1,12 @@
 /******************* 
+Page
+*******************/
+.page {
+  height: 100%;
+  margin: 0;
+}
+
+/******************* 
 Topbar
 *******************/
 
@@ -74,6 +82,21 @@ Header 6
   .subtitle {
     color: $white;
     line-height: 30px;
+  }
+}
+
+.static-head {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #607df9;
+
+  .title {
+    color: $white;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 54px;
   }
 }
 

@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       <div className="page-wrapper">
         <div className="container-fluid">{children}</div>
       </div>
-      <Footer />
+      
     </div>
   );
 };

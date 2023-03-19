@@ -11,17 +11,18 @@ const Banner2 = () => {
         <Row className="">
           <Col lg="6" md="6" className="align-self-center">
             <h1 className="title">
-              Testing for 短宣
+              「私も短期宣教参加できる？」
             </h1>
             <h4 className="subtitle font-light">
-              Testing for 短宣
+              3分で簡単検査！
             </h4>
-            <a
-              href="https://wrappixel.com/templates/nextkit-nextjs-free-uikit"
-              className="btn btn-danger m-r-20 btn-md m-t-30 "
+            <Link
+              href="/name"
             >
-              GO
-            </a>
+              <a className="btn btn-danger m-r-20 btn-md m-t-30 ">
+                スタート
+              </a>
+            </Link>
             {/* <Link href="/#coming">
               <a className="btn btn-md m-t-30  btn-outline-light ">
                 Upgrade To Pro

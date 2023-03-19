@@ -9,31 +9,28 @@ const Footer = () => {
       <Container>
         <Row>
           <Col lg="3" md="6" className="m-b-30">
-            <h5 className="m-b-20">Address</h5>
-            <p>71 Amsteroum Avenue Cronish Night, NY 35098</p>
+            <h5 className="m-b-20">住所</h5>
+            <p>〒022-0003 岩手県大船渡市盛町字舘下４番地３</p>
           </Col>
           <Col lg="3" md="6" className="m-b-30">
-            <h5 className="m-b-20">Phone</h5>
+            <h5 className="m-b-20">ホームページ</h5>
             <p>
-              Reception : +205 123 4567 <br />
-              Office : +207 235 7890
+              <Link href="https://npowyg.com">
+                <a className="link">npowyg.com</a>
+              </Link>
             </p>
           </Col>
           <Col lg="3" md="6" className="m-b-30">
-            <h5 className="m-b-20">Email</h5>
+            <h5 className="m-b-20">電子メイル</h5>
             <p>
-              Office :
+              事務所 :
               <Link href="#">
-                <a className="link">info@wrappixel.com</a>
+                <a className="link">info@npowyg.com</a>
               </Link>
               <br />
-              Site :
-              <Link href="https://www.wrappixel.com">
-                <a className="link">wrappixel.com</a>
-              </Link>
             </p>
           </Col>
-          <Col lg="3" md="6">
+          {/* <Col lg="3" md="6">
             <h5 className="m-b-20">Social</h5>
             <div className="round-social light">
               <Link href="#">
@@ -62,9 +59,9 @@ const Footer = () => {
                 </a>
               </Link>
             </div>
-          </Col>
+          </Col> */}
         </Row>
-        <div className="f4-bottom-bar">
+        {/* <div className="f4-bottom-bar">
           <Row>
             <Col md="12">
               <div className="d-flex font-14">
@@ -88,7 +85,7 @@ const Footer = () => {
               </div>
             </Col>
           </Row>
-        </div>
+        </div> */}
       </Container>
     </div>
   );
