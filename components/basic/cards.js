@@ -1,16 +1,22 @@
 /* eslint-disable */
 import React from 'react';
-import { Card, Button, CardTitle, CardText, CardBody, Row, Col, Container } from 'reactstrap';
+import { useState, useContext } from 'react';
+import { Card, Button, CardTitle, CardText, CardBody, Row, Col, Container, Spinner } from 'reactstrap';
 import { useRouter } from 'next/router'
 
 const Cards = ({ info }) => {
 
     const router = useRouter()
 
-    const buttonClick = () => {
+    const [isFinal, setIsFinal] = useState(false);
+
+    const buttonClick = (event) => {
 
         if (info.isEnd) {
-            router.push('/result')
+            setIsFinal(true)
+            setTimeout(() => {
+                router.push('/result')
+            }, 3000);
         }
         else {
             let nextID = info.id + 1
@@ -21,6 +27,8 @@ const Cards = ({ info }) => {
 
     };
 
+    let spinnerHeight = isFinal ? '3rem' : '0rem'
+
     return (
         <div>
             <div className="spacer" id="card-component">
@@ -29,6 +37,14 @@ const Cards = ({ info }) => {
                         <Col xs='12' className="text-center">
                             <h1 className="title font-bold">{info.topic}</h1>
                             {/* <h6 className="subtitle">Here you can check Demos we created based on WrapKit. Its quite easy to Create your own dream website &amp; dashboard in No-time.</h6> */}
+                            <Spinner
+                                color="white"
+                                className={isFinal ? 'visible' : 'invisible'}
+                                style={{
+                                    height: spinnerHeight,
+                                    width: spinnerHeight
+                                }}
+                            />
                         </Col>
                     </Row>
                 </Container>
@@ -42,6 +58,8 @@ const Cards = ({ info }) => {
                             <CardText>With supporting text below as a natural lead-in to additional content.</CardText> */}
                         {/* <CardBody> */}
                         <Button
+                            active
+                            disabled={isFinal}
                             color="danger"
                             className="btn-block mr-1 mt-1 btn-lg"
                             onClick={buttonClick}
@@ -51,6 +69,8 @@ const Cards = ({ info }) => {
                     </Col>
                     <Col xs="6" md="6">
                         <Button
+                            active
+                            disabled={isFinal}
                             color="success"
                             className="btn-block mr-1 mt-1 btn-lg"
                             onClick={buttonClick}
